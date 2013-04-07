@@ -6,6 +6,7 @@ class CalculatorScreen < ProMotion::Screen
   BOTTOM_SPACING = Device.screen.height - 2*MARGIN
   CD_BTN_SIZE = [BUTTON_SIZE[0] + BUTTON_WIDTH, BUTTON_SIZE[1]*0.75]
   FUNCTIONS = %w[+ - * /]
+  REGEX_SPLIT_ON_FUNCTION = Regexp.new('[' + Regexp.quote(FUNCTIONS.join('')) + ']')
 
   def on_load
     self.view.backgroundColor = 'gray'.to_color
@@ -38,9 +39,9 @@ class CalculatorScreen < ProMotion::Screen
     button = create_button(number.to_s, [position, BUTTON_SIZE])
 
     button.when(UIControlEventTouchUpInside) do
-      @display.text= "" if @just_solved
+      @display.text= "" if @just_solved or @display.trimmed_text == '0'
       @just_solved = false
-      @display.append number.to_s
+      @display.append number.to_s 
     end
   end
 
@@ -55,7 +56,7 @@ class CalculatorScreen < ProMotion::Screen
         if FUNCTIONS.include? @display.trimmed_text[-2]
           @display.text = @display.trimmed_text[0..-2]
         end
-        @display.last_char = function
+        @display.last_char = function unless @display.trimmed_text == '-'
       else
         @display.append function unless (@display.empty? and function != '-') or
             (function == '-' and @display.last_char == '-') or
@@ -71,10 +72,11 @@ class CalculatorScreen < ProMotion::Screen
     button = create_button('.', [position, BUTTON_SIZE])
     button.when(UIControlEventTouchUpInside) do
       if @display.empty? or FUNCTIONS.include? @display.last_char or @just_solved
+        @display.text = '' if @just_solved
         @just_solved = false
         @display.append '0.'
       else
-        split = @display.text.split(Regexp.new ('[' + FUNCTIONS.join('').gsub('/', '\/') + ']'))
+        split = @display.text.split(REGEX_SPLIT_ON_FUNCTION)
         @display.append '.' unless split[-1].include? '.' or @display.trimmed_text == "Inf"
       end
     end
@@ -85,7 +87,8 @@ class CalculatorScreen < ProMotion::Screen
     button = create_button('Delete', [position, CD_BTN_SIZE])
     button.when(UIControlEventTouchUpInside) do
 
-      @display.text = "" if @display.trimmed_text == "Inf"
+      @display.text = "" if @display.trimmed_text == "Inf" or @display.trimmed_text == '0.' or @just_solved
+      @just_solved = false
       @display.text= @display.trimmed_text[0..-2] unless @display.empty?
     end
   end
