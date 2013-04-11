@@ -1,5 +1,5 @@
 class MyLabel < UILabel
-  PADDING = 3
+  PADDING = 2
   def append(string)
     self.text= trimmed_text + string
   end

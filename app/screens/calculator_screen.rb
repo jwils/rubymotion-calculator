@@ -9,12 +9,7 @@ class CalculatorScreen < ProMotion::Screen
   REGEX_SPLIT_ON_FUNCTION = Regexp.new('[' + Regexp.quote(FUNCTIONS.join('')) + ']')
 
   def on_load
-    self.view.backgroundColor = 'gray'.to_color
-  end
-
-  def will_appear
     @view_loaded ||= begin
-      view.styleId = 'calcView'
       create_display
       10.times{|x| create_number_button(x)}
       FUNCTIONS.each {|x| create_function_button(x)}
@@ -25,6 +20,9 @@ class CalculatorScreen < ProMotion::Screen
       @brain = CalculatorBrain.new
       true
     end
+  end
+
+  def will_appear
     @just_solved=false
   end
 
@@ -107,7 +105,7 @@ class CalculatorScreen < ProMotion::Screen
     button.when(UIControlEventTouchUpInside) do
       text = @display.trimmed_text
       text = text[0..-2] if FUNCTIONS.include? text[-1]
-      @display.text = sprintf("%g", @brain.eval(text)) unless  @display.trimmed_text == "Inf"
+      @display.text = sprintf("%g", @brain.eval(text)) unless  @display.trimmed_text.empty? or @display.trimmed_text == "Inf"
       @just_solved = true
     end
   end
@@ -116,6 +114,7 @@ class CalculatorScreen < ProMotion::Screen
     button = UIButton.buttonWithType UIButtonTypeRoundedRect
     button.setTitle text, forState: UIControlStateNormal
     button.frame = frame
+    button.setNuiClass("Button:LargeButton")
     button.accessibilityLabel = text
     add button
   end
@@ -128,7 +127,8 @@ class CalculatorScreen < ProMotion::Screen
         font: UIFont.systemFontOfSize(24.0),
         text: "",
         numberOfLines: 1,
-        styleId: "numbers",
     }
+    @display.setNuiClass("Label:LargeLabel")
+    @display
   end
 end

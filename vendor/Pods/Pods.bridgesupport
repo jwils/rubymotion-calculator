@@ -1,0 +1,712 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum value='1' name='kTextAlignmentCenter'/>
+<enum value='0' name='kTextAlignmentLeft'/>
+<enum value='2' name='kTextAlignmentRight'/>
+<class name='NUIAppearance'>
+<method class_method='true' selector='init'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIBarButtonItemRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UIBarButtonItem*' type='@' index='0' name='item'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIButtonRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UIButton*' type='@' index='0' name='button'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIControlRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UIControl*' type='@' index='0' name='control'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIConverter'>
+<method class_method='true' selector='toBoolean:'>
+<arg declared_type='id' type='@' index='0' name='value'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='toBorderStyle:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UITextBorderStyle' type='i'/>
+</method>
+<method class_method='true' selector='toColor:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method class_method='true' selector='toColorFromImageName:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method class_method='true' selector='toControlContentHorizontalAlignment:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UIControlContentHorizontalAlignment' type='i'/>
+</method>
+<method class_method='true' selector='toControlContentVerticalAlignment:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UIControlContentVerticalAlignment' type='i'/>
+</method>
+<method class_method='true' selector='toEdgeInsets:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}'/>
+</method>
+<method class_method='true' selector='toFloat:'>
+<arg declared_type='id' type='@' index='0' name='value'/>
+<retval declared_type='float' type='f'/>
+</method>
+<method class_method='true' selector='toImageFromColorName:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='toImageFromImageName:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='toOffset:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='UIOffset' type='{UIOffset=ff}'/>
+</method>
+<method class_method='true' selector='toSize:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='CGSize' type='{CGSize=ff}'/>
+</method>
+<method class_method='true' selector='toTextAlignment:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<retval declared_type='NSTextAlignment' type='i'/>
+</method>
+</class>
+<class name='NUIFileMonitor'>
+<method class_method='true' selector='watch:withCallback:'>
+<arg declared_type='NSString*' type='@' index='0' name='path'/>
+<arg declared_type='void (^)()' type='@?' index='1' function_pointer='true' name='handler'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIGraphics'>
+<method class_method='true' selector='backButtonWithClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='className'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='caLayerToUIImage:'>
+<arg declared_type='CALayer*' type='@' index='0' name='layer'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='colorImage:withFrame:'>
+<arg declared_type='UIColor*' type='@' index='0' name='color'/>
+<arg declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='frame'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='gradientImageWithTop:bottom:frame:'>
+<arg declared_type='id' type='@' index='0' name='topColor'/>
+<arg declared_type='id' type='@' index='1' name='bottomColor'/>
+<arg declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='2' name='frame'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='gradientLayerWithTop:bottom:frame:'>
+<arg declared_type='id' type='@' index='0' name='topColor'/>
+<arg declared_type='id' type='@' index='1' name='bottomColor'/>
+<arg declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='2' name='frame'/>
+<retval declared_type='CAGradientLayer*' type='@'/>
+</method>
+<method class_method='true' selector='roundedRectImageWithClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='className'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='roundedRectImageWithClass:layer:'>
+<arg declared_type='NSString*' type='@' index='0' name='className'/>
+<arg declared_type='CALayer*' type='@' index='1' name='layer'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='roundedRectLayerWithClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='className'/>
+<retval declared_type='CALayer*' type='@'/>
+</method>
+<method class_method='true' selector='tintCIImage:withColor:'>
+<arg declared_type='CIImage*' type='@' index='0' name='image'/>
+<arg declared_type='CIColor*' type='@' index='1' name='color'/>
+<retval declared_type='CIImage*' type='@'/>
+</method>
+<method class_method='true' selector='uiImageToCALayer:'>
+<arg declared_type='UIImage*' type='@' index='0' name='image'/>
+<retval declared_type='CALayer*' type='@'/>
+</method>
+</class>
+<class name='NUILabelRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UILabel*' type='@' index='0' name='label'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='render:withClass:withSuffix:'>
+<arg declared_type='UILabel*' type='@' index='0' name='label'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<arg declared_type='NSString*' type='@' index='2' name='suffix'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderText:withClass:'>
+<arg declared_type='UILabel*' type='@' index='0' name='label'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUINavigationBarRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UINavigationBar*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sizeDidChange:'>
+<arg declared_type='UINavigationBar*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUINavigationItemRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UINavigationItem*' type='@' index='0' name='item'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIProgressViewRenderer'>
+<method class_method='true' selector='render:'>
+<arg declared_type='UIProgressView*' type='@' index='0' name='progressView'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UIProgressView*' type='@' index='0' name='progressView'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIRenderer'>
+<method class_method='true' selector='addOrientationDidChangeObserver:'>
+<arg declared_type='id' type='@' index='0' name='observer'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='render:'>
+<arg declared_type='UIView*' type='@' index='0' name='object'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderBarButtonItem:'>
+<arg declared_type='UIBarButtonItem*' type='@' index='0' name='item'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderBarButtonItem:withClass:'>
+<arg declared_type='UIBarButtonItem*' type='@' index='0' name='item'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderButton:'>
+<arg declared_type='UIButton*' type='@' index='0' name='button'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderButton:withClass:'>
+<arg declared_type='UIButton*' type='@' index='0' name='button'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderControl:'>
+<arg declared_type='UIControl*' type='@' index='0' name='control'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderControl:withClass:'>
+<arg declared_type='UIControl*' type='@' index='0' name='control'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderLabel:'>
+<arg declared_type='UILabel*' type='@' index='0' name='label'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderLabel:withClass:'>
+<arg declared_type='UILabel*' type='@' index='0' name='label'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderLabel:withClass:withSuffix:'>
+<arg declared_type='UILabel*' type='@' index='0' name='label'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<arg declared_type='NSString*' type='@' index='2' name='suffix'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderNavigationBar:'>
+<arg declared_type='UINavigationBar*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderNavigationBar:withClass:'>
+<arg declared_type='UINavigationBar*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderNavigationItem:'>
+<arg declared_type='UINavigationItem*' type='@' index='0' name='item'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderNavigationItem:withClass:'>
+<arg declared_type='UINavigationItem*' type='@' index='0' name='item'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderProgressView:'>
+<arg declared_type='UIProgressView*' type='@' index='0' name='progressView'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderProgressView:withClass:'>
+<arg declared_type='UIProgressView*' type='@' index='0' name='progressView'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSearchBar:'>
+<arg declared_type='UISearchBar*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSearchBar:withClass:'>
+<arg declared_type='UISearchBar*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSegmentedControl:'>
+<arg declared_type='UISegmentedControl*' type='@' index='0' name='control'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSegmentedControl:withClass:'>
+<arg declared_type='UISegmentedControl*' type='@' index='0' name='control'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSlider:'>
+<arg declared_type='UISlider*' type='@' index='0' name='slider'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSlider:withClass:'>
+<arg declared_type='UISlider*' type='@' index='0' name='slider'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSwitch:'>
+<arg declared_type='UISwitch*' type='@' index='0' name='uiSwitch'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSwitch:withClass:'>
+<arg declared_type='UISwitch*' type='@' index='0' name='uiSwitch'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderTabBar:'>
+<arg declared_type='UITabBar*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderTabBar:withClass:'>
+<arg declared_type='UITabBar*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderTabBarItem:'>
+<arg declared_type='UITabBarItem*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderTabBarItem:withClass:'>
+<arg declared_type='UITabBarItem*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderTableViewCell:'>
+<arg declared_type='UITableViewCell*' type='@' index='0' name='cell'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderTableViewCell:withClass:'>
+<arg declared_type='UITableViewCell*' type='@' index='0' name='cell'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderTextField:'>
+<arg declared_type='UITextField*' type='@' index='0' name='textField'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderTextField:withClass:'>
+<arg declared_type='UITextField*' type='@' index='0' name='textField'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderToolbar:'>
+<arg declared_type='UIToolbar*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderToolbar:withClass:'>
+<arg declared_type='UIToolbar*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderView:'>
+<arg declared_type='UIView*' type='@' index='0' name='view'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderView:withClass:'>
+<arg declared_type='UIView*' type='@' index='0' name='view'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderWindow:'>
+<arg declared_type='UIWindow*' type='@' index='0' name='window'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderWindow:withClass:'>
+<arg declared_type='UIWindow*' type='@' index='0' name='window'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renderedObjectIdentifiers'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='renderedObjects'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method class_method='true' selector='rerender'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRenderedObjectIdentifiers:'>
+<arg declared_type='NSMutableArray*' type='@' index='0' name='renderedObjectIdentifiers'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRenderedObjects:'>
+<arg declared_type='NSMutableArray*' type='@' index='0' name='renderedObjects'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sizeDidChangeForNavigationBar:'>
+<arg declared_type='UINavigationBar*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sizeDidChangeForTabBar:'>
+<arg declared_type='UITabBar*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sizeDidChangeForTableViewCell:'>
+<arg declared_type='UITableViewCell*' type='@' index='0' name='cell'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUISearchBarRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UISearchBar*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUISegmentedControlRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UISegmentedControl*' type='@' index='0' name='control'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUISettings'>
+<method class_method='true' selector='autoUpdateIsEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='autoUpdatePath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='autoUpdatePath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='get:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='getBoolean:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='getBorderStyle:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UITextBorderStyle' type='i'/>
+</method>
+<method class_method='true' selector='getColor:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method class_method='true' selector='getColorFromImage:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method class_method='true' selector='getControlContentHorizontalAlignment:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UIControlContentHorizontalAlignment' type='i'/>
+</method>
+<method class_method='true' selector='getControlContentVerticalAlignment:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UIControlContentVerticalAlignment' type='i'/>
+</method>
+<method class_method='true' selector='getEdgeInsets:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}'/>
+</method>
+<method class_method='true' selector='getFloat:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='float' type='f'/>
+</method>
+<method class_method='true' selector='getImage:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='getImageFromColor:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='getOffset:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='UIOffset' type='{UIOffset=ff}'/>
+</method>
+<method class_method='true' selector='getSize:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='CGSize' type='{CGSize=ff}'/>
+</method>
+<method class_method='true' selector='getTextAlignment:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='NSTextAlignment' type='i'/>
+</method>
+<method class_method='true' selector='hasProperty:withClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='property'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='init'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='initWithStylesheet:'>
+<arg declared_type='NSString*' type='@' index='0' name='name'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='loadStylesheetByPath:'>
+<arg declared_type='NSString*' type='@' index='0' name='path'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setAutoUpdatePath:'>
+<arg declared_type='NSString*' type='@' index='0' name='path'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAutoUpdatePath:'>
+<arg declared_type='NSString*' type='@' index='0' name='autoUpdatePath'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStyles:'>
+<arg declared_type='NSMutableDictionary*' type='@' index='0' name='styles'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='styles'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+</class>
+<class name='NUISliderRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UISlider*' type='@' index='0' name='slider'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIStyleParser'>
+<method selector='getStylesFromFile:'>
+<arg declared_type='NSString*' type='@' index='0' name='content'/>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='getStylesFromPath:'>
+<arg declared_type='NSString*' type='@' index='0' name='path'/>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+</class>
+<class name='NUISwitchRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UISwitch*' type='@' index='0' name='uiSwitch'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUISwizzler'>
+<method selector='swizzleAll'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUITabBarItemRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UITabBarItem*' type='@' index='0' name='item'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUITabBarRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UITabBar*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sizeDidChange:'>
+<arg declared_type='UITabBar*' type='@' index='0' name='bar'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUITableViewCellRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UITableViewCell*' type='@' index='0' name='cell'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sizeDidChange:'>
+<arg declared_type='UITableViewCell*' type='@' index='0' name='cell'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUITextFieldRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UITextField*' type='@' index='0' name='textField'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIToolbarRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UIToolbar*' type='@' index='0' name='bar'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIUtilities'>
+<method class_method='true' selector='titleTextAttributesForClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='className'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='titleTextAttributesForClass:withSuffix:'>
+<arg declared_type='NSString*' type='@' index='0' name='className'/>
+<arg declared_type='NSString*' type='@' index='1' name='suffix'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+</class>
+<class name='NUIViewRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UIView*' type='@' index='0' name='view'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderBorder:withClass:'>
+<arg declared_type='UIView*' type='@' index='0' name='view'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderShadow:withClass:'>
+<arg declared_type='UIView*' type='@' index='0' name='view'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='renderSize:withClass:'>
+<arg declared_type='UIView*' type='@' index='0' name='view'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NUIWindowRenderer'>
+<method class_method='true' selector='render:withClass:'>
+<arg declared_type='UIWindow*' type='@' index='0' name='window'/>
+<arg declared_type='NSString*' type='@' index='1' name='className'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='UIBarButtonItem'>
+<method selector='applyNUI'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nuiClass'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nuiIsApplied'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='setNuiClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='nuiClass'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNuiIsApplied:'>
+<arg declared_type='NSNumber*' type='@' index='0' name='nuiIsApplied'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='UINavigationItem'>
+<method selector='applyNUI'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nuiClass'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nuiIsApplied'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='setNuiClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='nuiClass'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNuiIsApplied:'>
+<arg declared_type='NSNumber*' type='@' index='0' name='nuiIsApplied'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='UITabBarItem'>
+<method selector='applyNUI'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nuiClass'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nuiIsApplied'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='setNuiClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='nuiClass'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNuiIsApplied:'>
+<arg declared_type='NSNumber*' type='@' index='0' name='nuiIsApplied'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='UIView'>
+<method selector='applyNUI'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nuiClass'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nuiIsApplied'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='setNuiClass:'>
+<arg declared_type='NSString*' type='@' index='0' name='nuiClass'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNuiIsApplied:'>
+<arg declared_type='NSNumber*' type='@' index='0' name='nuiIsApplied'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+</signatures>
